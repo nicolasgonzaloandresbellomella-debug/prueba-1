@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.main-header {
+    background-color: #1a1a1a; 
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 3rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.brand-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-box {
+    background-color: #00ffcc; 
+    color: #1a1a1a;
+    font-weight: bold;
+    font-size: 1.3rem;
+    padding: 8px 12px;
+    border-radius: 6px;
+}
+
+.site-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: #a0a0a0;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #00ffcc; 
+    font-weight: bold;
+}
+
+.hero-section {
+    background-color: #242424; 
+    color: #ffffff;
+    padding: 4rem 3rem;
+}
+
+.hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-greeting {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.highlight-name {
+    color: #00ffcc; 
+    font-weight: bold;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #a0a0a0;
+    margin-bottom: 2rem;
+}
+
+.hero-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 600px;
+}
+
+.hero-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-profile-pic {
+    border-radius: 50%;
+    border: 5px solid rgba(0, 255, 204, 0.3); 
+    box-shadow: 0 4px 15px rgba(0, 255, 204, 0.1);
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .main-header {
+        flex-direction: column;
+        gap: 20px;
+        padding: 1.5rem;
+    }
+    
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero-section {
+        padding: 3rem 1.5rem;
+    }
+
+    .hero-content {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .hero-greeting {
+        font-size: 2.2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .hero-description {
+        max-width: 100%;
+    }
+
+    .hero-profile-pic {
+        width: 150px;
+        height: 150px;
+    }
+}
