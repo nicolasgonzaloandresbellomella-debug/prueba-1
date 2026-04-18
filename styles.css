@@ -1,149 +1,74 @@
+/* VARIABLES CYBER TECH */
+:root {
+    --primary-bg: #0f0a1e;    /* Morado oscuro profundo */
+    --card-bg: #1a142d;       /* Morado intermedio para secciones */
+    --accent-color: #a855f7;  /* Púrpura neón brillante */
+    --text-main: #f5f3ff;     /* Blanco suave */
+    --text-muted: #94a3b8;    /* Gris azulado para textos secundarios */
+    --border-color: #334155;  /* Borde sutil */
+}
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', sans-serif;
+    scroll-behavior: smooth;
 }
 
-.main-header {
-    background-color: #1a1a1a; 
-    color: #ffffff;
+body {
+    background-color: var(--primary-bg);
+    color: var(--text-main);
+}
+
+/* HEADER Y NAVEGACIÓN */
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5rem 3rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    padding: 20px 50px;
+    background-color: var(--card-bg);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid var(--border-color);
 }
 
-.brand-container {
+.logo {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 12px;
 }
 
-.logo-box {
-    background-color: #00ffcc; 
-    color: #1a1a1a;
-    font-weight: bold;
-    font-size: 1.3rem;
-    padding: 8px 12px;
-    border-radius: 6px;
-}
-
-.site-title {
-    font-size: 1.5rem;
-    font-weight: 700;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 25px;
-}
-
-.nav-links a {
-    color: #a0a0a0;
-    text-decoration: none;
-    font-size: 1rem;
-    transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-    color: #00ffcc; 
-    font-weight: bold;
-}
-
-.hero-section {
-    background-color: #242424; 
-    color: #ffffff;
-    padding: 4rem 3rem;
-}
-
-.hero-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    gap: 40px;
-}
-
-.hero-text {
-    flex: 1;
-}
-
-.hero-greeting {
-    font-size: 3rem;
-    margin-bottom: 0.5rem;
-}
-
-.highlight-name {
-    color: #00ffcc; 
-    font-weight: bold;
-}
-
-.hero-subtitle {
-    font-size: 1.5rem;
-    font-weight: 300;
-    color: #a0a0a0;
-    margin-bottom: 2rem;
-}
-
-.hero-description {
-    font-size: 1rem;
-    line-height: 1.6;
-    max-width: 600px;
-}
-
-.hero-image-container {
+.logo-icono {
+    background-color: var(--accent-color);
+    color: var(--primary-bg);
+    width: 42px;
+    height: 42px;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 8px;
+    font-weight: 800;
 }
 
-.hero-profile-pic {
-    border-radius: 50%;
-    border: 5px solid rgba(0, 255, 204, 0.3); 
-    box-shadow: 0 4px 15px rgba(0, 255, 204, 0.1);
-    object-fit: cover;
+.logo span {
+    font-weight: 700;
+    font-size: 1.2rem;
 }
 
-@media (max-width: 768px) {
-    .main-header {
-        flex-direction: column;
-        gap: 20px;
-        padding: 1.5rem;
-    }
-    
-    .nav-links {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
 
-    .hero-section {
-        padding: 3rem 1.5rem;
-    }
+nav a {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-weight: 600;
+    transition: 0.3s;
+}
 
-    .hero-content {
-        flex-direction: column-reverse;
-        text-align: center;
-        gap: 30px;
-    }
-
-    .hero-greeting {
-        font-size: 2.2rem;
-    }
-
-    .hero-subtitle {
-        font-size: 1.2rem;
-    }
-
-    .hero-description {
-        max-width: 100%;
-    }
-
-    .hero-profile-pic {
-        width: 150px;
-        height: 150px;
-    }
+nav a:hover {
+    color: var(--accent-color);
 }
