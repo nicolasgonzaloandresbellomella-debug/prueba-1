@@ -72,3 +72,61 @@ nav a {
 nav a:hover {
     color: var(--accent-color);
 }
+section {
+    padding: 80px 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2 {
+    text-align: center;
+    color: var(--accent-color);
+    margin-bottom: 40px;
+    font-size: 2.2rem;
+}
+
+.sobre-mi-contenido {
+    display: flex;
+    gap: 40px;
+}
+
+article, aside {
+    background-color: var(--card-bg);
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+}
+
+article { flex: 2; }
+aside { flex: 1; }
+
+.foto-perfil {
+    width: 180px; 
+    height: 180px; 
+    border-radius: 50%; 
+    object-fit: cover; 
+    float: left;
+    margin-right: 25px;
+    margin-bottom: 10px;
+    border: 3px solid var(--accent-color);
+    box-shadow: 0 0 15px var(--accent-color);
+}
+
+p {
+    line-height: 1.7;
+    margin-bottom: 15px;
+    color: var(--text-muted);
+}
+
+strong { color: var(--accent-color); }
+
+blockquote {
+    margin-top: 20px;
+    padding: 15px;
+    border-left: 4px solid var(--accent-color);
+    background: var(--primary-bg);
+    font-style: italic;
+}
+
+aside ul { list-style: none; }
+aside li { margin-bottom: 15px; border-bottom: 1px solid var(--border-color); padding-bottom: 5px; }
