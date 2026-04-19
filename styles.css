@@ -1,12 +1,12 @@
-/* VARIABLES CYBER TECH */
 :root {
-    --primary-bg: #0f0a1e;    /* Morado oscuro profundo */
-    --card-bg: #1a142d;       /* Morado intermedio para secciones */
-    --accent-color: #a855f7;  /* Púrpura neón brillante */
-    --text-main: #f5f3ff;     /* Blanco suave */
-    --text-muted: #94a3b8;    /* Gris azulado para textos secundarios */
-    --border-color: #334155;  /* Borde sutil */
+    --primary-bg: #0f0a1e;
+    --card-bg: #1a142d;
+    --accent-color: #a855f7;
+    --text-main: #f5f3ff;
+    --text-muted: #94a3b8;
+    --border-color: #334155;
 }
+
 * {
     margin: 0;
     padding: 0;
@@ -20,7 +20,6 @@ body {
     color: var(--text-main);
 }
 
-/* HEADER Y NAVEGACIÓN */
 header {
     display: flex;
     justify-content: space-between;
@@ -72,6 +71,7 @@ nav a {
 nav a:hover {
     color: var(--accent-color);
 }
+
 section {
     padding: 80px 50px;
     max-width: 1200px;
@@ -129,8 +129,12 @@ blockquote {
 }
 
 aside ul { list-style: none; }
-aside li { margin-bottom: 15px; border-bottom: 1px solid var(--border-color); padding-bottom: 5px; }
-/* --- SECCIÓN HABILIDADES --- */
+aside li { 
+    margin-bottom: 15px; 
+    border-bottom: 1px solid var(--border-color); 
+    padding-bottom: 5px;
+}
+
 .habilidades h2 {
     text-align: center;
     color: var(--accent-color);
@@ -218,7 +222,7 @@ tr:hover {
     color: var(--accent-color);
     font-weight: bold;
 }
-/* --- ESTILOS DE LA BARRA DE PROGRESO --- */
+
 .bar-bg {
     background-color: var(--primary-bg);
     width: 100%;
@@ -232,12 +236,11 @@ tr:hover {
 .bar-fill {
     height: 100%;
     background-color: var(--accent-color);
-    box-shadow: 0 0 10px var(--accent-color); /* Efecto Neón */
+    box-shadow: 0 0 10px var(--accent-color);
     border-radius: 5px;
     transition: width 1s ease-in-out;
 }
 
-/* Ajustes adicionales a la tabla para que no se vea gigante */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -250,11 +253,10 @@ th, td {
     border-bottom: 1px solid var(--border-color);
 }
 
-/* Asegura que la columna de la barra tenga un ancho decente */
 td:last-child {
     min-width: 150px;
 }
-/* --- SECCIÓN PROYECTOS (CSS GRID) --- */
+
 .proyectos-intro {
     background-color: var(--card-bg);
     padding: 15px 25px;
@@ -267,7 +269,6 @@ td:last-child {
 
 .proyectos-grid {
     display: grid;
-    /* Creamos 3 columnas que se ajustan solas según el tamaño de la pantalla */
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
 }
@@ -291,7 +292,7 @@ td:last-child {
     height: 200px;
     object-fit: cover;
     display: block;
-    filter: grayscale(30%); /* Efecto un poco más tech */
+    filter: grayscale(30%);
     transition: filter 0.3s;
 }
 
@@ -345,7 +346,7 @@ td:last-child {
     color: #94a3b8;
     font-size: 1.1rem;
 }
-/* --- SECCIÓN CONTACTO (FLEXBOX) --- */
+
 .contacto-contenedor {
     display: flex;
     gap: 40px;
@@ -417,7 +418,7 @@ td:last-child {
 }
 
 .btn-enviar:hover {
-    background-color: #c084fc; /* Un púrpura más claro al pasar el mouse */
+    background-color: #c084fc;
     transform: scale(1.02);
 }
 
@@ -450,7 +451,6 @@ td:last-child {
     color: var(--accent-color);
 }
 
-/* --- FOOTER --- */
 footer {
     background-color: var(--card-bg);
     padding: 40px 50px 20px;
@@ -509,14 +509,13 @@ footer {
     border-top: 1px solid var(--border-color);
     padding-top: 20px;
 }
-/* --- REFINAMIENTO FLEXBOX (NAVBAR Y SECCIONES) --- */
+
 header {
     display: flex;
-    justify-content: space-between; /* Propiedad variada 1 */
-    align-items: center;            /* Propiedad variada 2 */
-    flex-wrap: wrap;                /* Propiedad variada 3 */
-    gap: 20px;                      /* Propiedad variada 4 */
-    /* ... resto de tus estilos del header ... */
+    justify-content: space-between;
+    align-items: center;            
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .sobre-mi-contenido, 
@@ -524,22 +523,17 @@ header {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    flex-wrap: wrap; /* Importante para que no se rompa en pantallas medianas */
+    flex-wrap: wrap; 
     gap: 40px;
 }
 
-/* --- REFINAMIENTO CSS GRID (PROYECTOS) --- */
 .proyectos-grid {
     display: grid;
-    /* Definición clara de columnas con fr (fractional units) */
-    grid-template-columns: repeat(3, 1fr); 
-    /* Gap definido según rúbrica */
-    grid-gap: 30px; 
-    /* Alineación de los items dentro de la grilla */
-    align-items: stretch; 
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+    align-items: stretch;
 }
 
-/* Opcional: Si quieres lucirte con 'áreas definidas' para el layout principal */
 .main-container {
     display: grid;
     grid-template-areas: 
@@ -550,11 +544,7 @@ header {
         "contact";
     grid-gap: 50px;
 }
-/* ========================================================
-   DISEÑO RESPONSIVO (MEDIA QUERIES)
-   ======================================================== */
 
-/* Adaptación para Tablets  */
 @media (max-width: 768px) {
     header {
         flex-direction: column;
@@ -588,7 +578,6 @@ header {
         gap: 30px;
     }
 
-    /* La grilla pasa de 3 a 2 columnas */
     .proyectos-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -599,7 +588,6 @@ header {
     }
 }
 
-/* Adaptación para Dispositivos Móviles */
 @media (max-width: 480px) {
     h2 {
         font-size: 1.8rem;
@@ -622,4 +610,14 @@ header {
     .tabla-habilidades {
         padding: 15px;
     }
+}
+
+.form-group input:focus, 
+.form-group select:focus, 
+.form-group textarea:focus {
+    border-color: var(--accent-color);
+    background-color: rgba(168, 85, 247, 0.05);
+    box-shadow: 0 0 12px var(--accent-color);
+    outline: none;
+    transition: all 0.3s ease;
 }
