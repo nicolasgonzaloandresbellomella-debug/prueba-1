@@ -34,7 +34,7 @@ Este proyecto no requiere bases de datos, servidores complejos ni la instalació
 ### Opción 2: Para desarrolladores o estudiantes (Usando Git)
 Si ya tienes Git instalado en tu equipo y quieres clonar el repositorio, abre tu terminal y ejecuta:
 
-```bash
+``bash
 # 1. Clona este repositorio en tu equipo
 git clone https://github.com/nicolasgonzaloandresbellomella-debug/prueba-1.git
 
