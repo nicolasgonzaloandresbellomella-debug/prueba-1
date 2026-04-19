@@ -550,3 +550,76 @@ header {
         "contact";
     grid-gap: 50px;
 }
+/* ========================================================
+   DISEÑO RESPONSIVO (MEDIA QUERIES)
+   ======================================================== */
+
+/* Adaptación para Tablets  */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 15px 20px;
+        gap: 15px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    section {
+        padding: 50px 20px;
+    }
+    
+    .sobre-mi-contenido, 
+    .contacto-contenedor {
+        flex-direction: column;
+    }
+
+    .foto-perfil {
+        float: none;
+        display: block;
+        margin: 0 auto 20px;
+    }
+
+    .listas-habilidades {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    /* La grilla pasa de 3 a 2 columnas */
+    .proyectos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+/* Adaptación para Dispositivos Móviles */
+@media (max-width: 480px) {
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .proyectos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .redes-sociales {
+        justify-content: center;
+    }
+
+    .tabla-habilidades {
+        padding: 15px;
+    }
+}
