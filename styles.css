@@ -509,3 +509,44 @@ footer {
     border-top: 1px solid var(--border-color);
     padding-top: 20px;
 }
+/* --- REFINAMIENTO FLEXBOX (NAVBAR Y SECCIONES) --- */
+header {
+    display: flex;
+    justify-content: space-between; /* Propiedad variada 1 */
+    align-items: center;            /* Propiedad variada 2 */
+    flex-wrap: wrap;                /* Propiedad variada 3 */
+    gap: 20px;                      /* Propiedad variada 4 */
+    /* ... resto de tus estilos del header ... */
+}
+
+.sobre-mi-contenido, 
+.contacto-contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap; /* Importante para que no se rompa en pantallas medianas */
+    gap: 40px;
+}
+
+/* --- REFINAMIENTO CSS GRID (PROYECTOS) --- */
+.proyectos-grid {
+    display: grid;
+    /* Definición clara de columnas con fr (fractional units) */
+    grid-template-columns: repeat(3, 1fr); 
+    /* Gap definido según rúbrica */
+    grid-gap: 30px; 
+    /* Alineación de los items dentro de la grilla */
+    align-items: stretch; 
+}
+
+/* Opcional: Si quieres lucirte con 'áreas definidas' para el layout principal */
+.main-container {
+    display: grid;
+    grid-template-areas: 
+        "hero"
+        "bio"
+        "skills"
+        "projects"
+        "contact";
+    grid-gap: 50px;
+}
