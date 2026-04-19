@@ -254,3 +254,94 @@ th, td {
 td:last-child {
     min-width: 150px;
 }
+/* --- SECCIÓN PROYECTOS (CSS GRID) --- */
+.proyectos-intro {
+    background-color: var(--card-bg);
+    padding: 15px 25px;
+    border-radius: 8px;
+    border-left: 4px solid var(--accent-color);
+    margin-bottom: 30px;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.proyectos-grid {
+    display: grid;
+    /* Creamos 3 columnas que se ajustan solas según el tamaño de la pantalla */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.proyecto-card {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.proyecto-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--accent-color);
+    box-shadow: 0 0 20px rgba(168, 85, 247, 0.3);
+}
+
+.proyecto-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    filter: grayscale(30%); /* Efecto un poco más tech */
+    transition: filter 0.3s;
+}
+
+.proyecto-card:hover img {
+    filter: grayscale(0%);
+}
+
+.proyecto-card figcaption {
+    padding: 20px;
+}
+
+.proyecto-card figcaption span {
+    color: var(--accent-color);
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.proyecto-card h3 {
+    color: #ffffff;
+    margin: 10px 0;
+}
+
+.proyecto-card p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+.proyecto-card a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.85rem;
+    border: 1px solid var(--accent-color);
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.proyecto-card a:hover {
+    background-color: var(--accent-color);
+    color: var(--primary-bg);
+}
+
+.proyectos-quote {
+    text-align: center;
+    margin-top: 50px;
+    font-style: italic;
+    color: #94a3b8;
+    font-size: 1.1rem;
+}
